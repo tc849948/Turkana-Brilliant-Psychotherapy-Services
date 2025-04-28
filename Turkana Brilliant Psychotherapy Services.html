@@ -1,1 +1,1759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkana Brilliant Psychotherapy Services | Mental Health Support in Turkana County</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #e67e22;
+            --secondary: #d35400;
+            --accent: #f39c12;
+            --light: #fef5e7;
+            --dark: #7e5109;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        /* Header Styles */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 80px;
+            width: auto;
+            max-width: 100%;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
 
+        .org-name {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 100vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: 0;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            font-size: clamp(1.4rem, 2vw, 1.8rem);
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: rgba(230, 126, 34, 0.1);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Contact Slide Styles */
+        .contact-slide {
+            background: #f8fafc;
+            padding: 0;
+            margin-top: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        
+        .contact-slide.active {
+            max-height: 200px;
+            padding: 20px;
+        }
+        
+        .contact-content h4 {
+            margin-top: 0;
+            color: #3498db;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .contact-content p {
+            margin: 10px 0;
+            color: #444;
+        }
+        
+        .contact-content a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: inline-block;
+            padding: 5px 0;
+        }
+        
+        .contact-content a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        /* Values Section */
+        .values {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .values .section-title h2 {
+            color: white;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .value-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .member-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 1.5rem;
+        }
+        
+        .member-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .member-info p {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--dark);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Scope of Work Section */
+        .scope {
+            background-color: rgba(230, 126, 34, 0.1);
+        }
+        
+        .scope-list {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .scope-list h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .scope-list ul {
+            list-style-position: inside;
+            margin-bottom: 2rem;
+        }
+        
+        .scope-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .scope-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .scope-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .scope-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-caption {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f5f7fa;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        
+        .contact-form-container, 
+        .contact-info-container {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form-container h3,
+        .contact-info-container h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .contact-form-container h3::after,
+        .contact-info-container h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #3498db;
+            bottom: 0;
+            left: 0;
+        }
+        
+        /* Contact Form Styles */
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .contact-form button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Contact Info Styles */
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #3498db;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .info-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .info-text p {
+            color: #7f8c8d;
+        }
+        
+        /* Ways to Help Section */
+        .help-section {
+            background-color: #e8f5e9;
+            border-left: 4px solid #2e7d32;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .help-section h3 {
+            margin-top: 0;
+            color: #2e7d32;
+            font-size: 1.3rem;
+        }
+        
+        .help-section ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        
+        .help-section li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #c8e6c9;
+            display: flex;
+            align-items: center;
+        }
+        
+        .help-section li:last-child {
+            border-bottom: none;
+        }
+        
+        .help-section i {
+            color: #2e7d32;
+            margin-right: 10px;
+            min-width: 20px;
+        }
+        
+        /* Donation Section */
+        .donation-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .bank-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bank-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%);
+        }
+        
+        .bank-image {
+            margin-bottom: 1.5rem;
+        }
+        
+        .bank-logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .donate-title {
+            color: #6a11cb;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .bank-info {
+            background: rgba(106, 17, 203, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(106, 17, 203, 0.1);
+        }
+        
+        .bank-info h4 {
+            color: #6a11cb;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .account-details {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-col p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 5px;
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 100px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .org-name {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .contact-form-container, 
+            .contact-info-container {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo img {
+                height: 180px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-card, .value-card, .team-member {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img 
+                    src="/storage/emulated/0/Download/-001-000-bspline.jpg" 
+                    alt="TBPS Logo"
+                >
+            </div>
+            <div class="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#values">Values</a></li>
+                <li><a href="#scope">Scope</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="org-name">Turkana Brilliant Psychotherapy Services</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Mental Health Support for Turkana County</h1>
+        <p>Providing professional psychosocial services to enhance well-being and quality of life since 2019</p>
+        <div class="hero-buttons">
+           <!-- In your Hero Section, change the Get Help button link -->
+          <a href="#get-in-touch" class="btn">Get Help</a>  <!-- Changed to point to contact section -->
+            <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Later in your HTML, you should have a contact section like this: -->
+<section class="info-text" id="info-text">  <!-- This is the target for the Get Help button -->
+    
+    <!-- Your contact form or information here -->
+</section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About TBPS</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Community-Based Psychotherapy Services</h3>
+                    <p>Turkana Brilliant Psychotherapy Services (TBPS) is a nonprofit organization founded in 2019 striving to provide psychosocial services to the general population of Turkana County.</p>
+                    <p>TBPS services are handled by mental health professionals, psychotherapists, psychologists, and clinical officers; but often they expand the services through the use of student psychologists, student social workers and student counselors who are supervised by experienced professionals.</p>
+                    <h3>What is a Counseling Psychologist?</h3>
+                    <p>A counseling psychologist specializes in providing therapy, guidance, and support to individuals, couples, families, and groups. They focus on helping people cope with emotional, social, vocational, and educational challenges, aiming to enhance their overall well-being and quality of life. Counseling psychologists often work in various settings such as private practice, mental health clinics, schools, colleges, or community organizations.</p>
+                    <p>Counseling psychologists utilize a range of therapeutic techniques and approaches to address their clients' concerns. They create a safe and supportive environment where clients can explore their thoughts, emotions, and behaviors. Counseling psychologists help individuals develop insights, coping strategies, and problem-solving skills to navigate through life's difficulties, manage stress, and improve their mental and emotional health. They may address issues such as anxiety, depression, relationship problems, career transitions, grief, and self-esteem.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Counseling session">
+                </div>
+            </div>
+            
+            <div class="about-text" style="margin-top: 3rem;">
+                <h3>Our Goal</h3>
+                <p>Enhance overall well-being and quality of life of clients</p>
+                
+                <h3>Our Vision</h3>
+                <p>Our vision is to provide better services to the community whose agenda is guided by the motto: WORKING FOR A HEALTHY LIVING.</p>
+                
+                <h3>Our Mission</h3>
+                <p>To provide a platform for people with mental illness and psychosocial problems to access professional help, gain confidence to lead independent fulfilling social lives through psychotherapy, access to drugs, awareness campaign, education, skill development, human rights advocacy and social integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Individual Counseling Card -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Individual Counseling">
+                    </div>
+                    <div class="service-content">
+                        <h3>Individual Counseling</h3>
+                        <p>One-on-one counseling sessions providing personalized emotional and psychological support for issues like trauma, anxiety, and self-esteem.</p>
+                        <a href="#individual-counseling" class="btn schedule-btn">Schedule Session</a>
+                        <!-- Hidden contact slide -->
+                        <div class="contact-slide">
+                            <div class="contact-content">
+                                <h4>Contact Us</h4>
+                                <p><i class="fas fa-phone"></i> <a href="tel:+254706571905">+254 706 571 905</a></p>
+                                <p><i class="fas fa-envelope"></i> <a href="mailto:turkanabrilliant@gmail.com">turkanabrilliant@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Support Groups Card -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Support Groups">
+                    </div>
+                    <div class="service-content">
+                        <h3>Support Groups</h3>
+                        <p>Group counseling sessions where clients connect with peers facing similar challenges, offering mutual encouragement and developing a sense of community.</p>
+                        <a href="#support-groups" class="btn schedule-btn">Join a Group</a>
+                        <!-- Hidden contact slide -->
+                        <div class="contact-slide">
+                            <div class="contact-content">
+                                <h4>Contact Us</h4>
+                                <p><i class="fas fa-phone"></i> <a href="tel:+254706571905">+254 706 571 905</a></p>
+                                <p><i class="fas fa-envelope"></i> <a href="mailto:turkanabrilliant@gmail.com">turkanabrilliant@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Workshops & Training Card -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Workshops">
+                    </div>
+                    <div class="service-content">
+                        <h3>Workshops & Training</h3>
+                        <p>Practical workshops on coping strategies, self-care, disease prevention, maternal health, gender-based violence, and more.</p>
+                        <a href="#workshops" class="btn schedule-btn">View Schedule</a>
+                        <!-- Hidden contact slide -->
+                        <div class="contact-slide">
+                            <div class="contact-content">
+                                <h4>Contact Us</h4>
+                                <p><i class="fas fa-phone"></i> <a href="tel:+254706571905">+254 706 571 905</a></p>
+                                <p><i class="fas fa-envelope"></i> <a href="mailto:turkanabrilliant@gmail.com">turkanabrilliant@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section values" id="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Impartiality</h3>
+                    <p>All people are equal regardless of race, ethnicity, religion, gender, physical ability, political affiliation, or country of origin.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Transparency</h3>
+                    <p>All resources are used for their designated purposes to assist in developing the needy community, not for personal gain.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Professionalism</h3>
+                    <p>We uphold the highest counseling ethical principles and fundamentals in all client interactions.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Responsiveness</h3>
+                    <p>We respond to deep-seated economic and social deprivation with long-term development initiatives and new ideas.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnership</h3>
+                    <p>We acknowledge the obligation of joint partnership, shared goals, and mutual accountability in pursuit of our objectives.</p>
+                </div>
+            </div>
+            
+            <div class="about-text" style="margin-top: 3rem; color: white; text-align: center;">
+                <h3>Commitment to the Core Values</h3>
+                <p>We shall endeavor to assist the community to relieve the suffering and transform their living conditions.</p>
+                <p>Our core values are fundamentals and indispensable and no document can substitute them, they are attitudes, decisions and actions that make up the fabric of our lines and work. The core values are our organization basis in decision making, planning, organizing and implementing our activities, hence they must be lived and honored.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope of Work Section -->
+    <section class="section scope" id="scope">
+        <div class="container">
+            <div class="section-title">
+                <h2>Scope of Work</h2>
+            </div>
+            <div class="scope-list">
+                <h3>Individual Counseling Sessions:</h3>
+                <p>We Conduct one-on-one counseling sessions with clients to provide personalized emotional and psychological support. These sessions are tailored to address individual concerns, such as trauma, anxiety, and self-esteem issues.</p>
+                
+                <h3>Support Groups:</h3>
+                <p>We Organize group counseling sessions where clients can connect with peers facing similar challenges. These support groups offer a platform for sharing experiences, offering mutual encouragement, and developing a sense of community.</p>
+                
+                <h3>Workshops on Coping Strategies and Self-Care:</h3>
+                <p>We Host workshops focused on practical coping strategies, stress management, and self-care techniques. These workshops provide teenage mothers with tools to manage their stress, improve their mental health, and prioritize their well-being.</p>
+                
+                <h3>Our Comprehensive Services Include:</h3>
+                <ul>
+                    <li>Creating awareness on communicable and non-communicable diseases e.g. TB, HIV/AIDS</li>
+                    <li>Training/capacity building on prevention measures, causal effects of communicable non communicable diseases</li>
+                    <li>Counselling clients with; depression, anxiety, family issues and stress related disorders</li>
+                    <li>Managing clients behavioral and developmental disorders</li>
+                    <li>Link complicated mental health disorders e.g. Dementia, schizophrenia and other neurocognitive disorders to experts</li>
+                    <li>Promote healthy behavior in the community through behavior change programs</li>
+                    <li>Create awareness on danger of alcohol addiction and substance abuse to a person's life</li>
+                    <li>Train on sexual gender-based violence, causes and effects to individual and community at large</li>
+                    <li>Maternal health care and family planning guidelines</li>
+                    <li>Current and emerging health related issues e.g. Covid 19 pandemic</li>
+                    <li>Health and sanitation principles</li>
+                    <li>Medication management and drug addiction</li>
+                </ul>
+            </div>
+            
+            <div class="scope-images">
+                <div class="scope-image">
+                    <img src="public/Images/-003-002.jpg" alt="Group meeting">
+                    <div class="image-caption">Workshops on Coping Strategies and Self-Care</div>
+                </div>
+                <div class="scope-image">
+                    <img src="public/Images/-003-003.jpg" alt="Group meeting">
+                    <div class="image-caption">Group members meeting for village banking loaning to overcome poverty</div>
+                </div>
+                <div class="scope-image">
+                    <img src="public/Images/-003-004.jpg" alt="Counselor Patricia Kebo">
+                    <div class="image-caption">Counselor Mrs. Patricia Kebo offering group counseling to members</div>
+                </div>
+            </div>
+            
+            <div class="scope-list" style="margin-top: 3rem;">
+                <h3>Organization Structure</h3>
+                <p>The affairs of Turkana Brilliant Psychotherapy services are managed by management committees whose bearers are; chairlady, secretary Treasurer elected at the A.G.M.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="public/Images/-003-004.jpg" alt="Counselor">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mrs. Kebo Patricia Nyanga</h3>
+                        <p>Lead Counselor</p>
+                        <p>Specializes in group therapy and trauma counseling with 10+ years experience.</p>
+                      
+                    </div>
+                </div>
+                <div class="team-member">
+                    
+                    <div class="member-info">
+                        <h3>Wickliffe Lolepo</h3>
+                        <p>Senior Psychologist</p>
+                        <p>Specializes in Helping individuals cope with life challenges, trauma, and emotional distress.</p>
+                        
+                    </div>
+                </div>
+                <div class="team-member">
+                    
+                    <div class="member-info">
+                        <h3>Charles Ngikito</h3>
+                        <p>Psychologist</p>
+                        <p>Focuses on youth counseling and substance abuse prevention programs.</p>
+                        
+                       </div>
+                       </div>
+                       <div class="team-member">                                         
+                    <div class="member-info">
+                        <h3>Patrick losike</h3>
+                        <p>Social worker</p>
+                        <p>Focuses on connecting clients to therapists, psychiatric care, and rehab programs.</p>
+                        
+                        </div>
+                         </div> 
+                        <div class="team-member">                                                 
+                    <div class="member-info">
+                        <h3>Lawrence Nyanga</h3>
+                        <p>Community health worker</p>
+                        <p>Educating communities on infectious diseases (e.g., HIV/AIDS, TB, malaria) </p>
+                        
+                        </div>
+                        </div>
+                    <div class="team-member">    
+                    <div class="member-info">
+                        <h3>Elizabeth Nyanga</h3>
+                        <p>Community health worker</p>
+                        <p>Providing communities with information on disease prevention, maternal and child health, nutrition, hygiene, and healthy lifestyles.</p>
+                        
+                        </div>
+                        </div>
+                        
+                          <div class="team-member">   
+                            <div class="member-info">
+                        <h3>Nickson lomuse</h3>
+                        <p>Nutritionist</p>
+                        <p>Focuses on educating on balanced diets in low-resource settings.</p>
+                        
+                        </div>
+                        </div>
+                         <div class="team-member">   
+                         <div class="member-info">
+                        <h3>Geoffrey Ariong</h3>
+                        <p>Governance</p>
+                        <p>Focuses on implementing oversight protections.</p>
+                        
+                        </div>
+                        </div>  
+                       <div class="team-member">   
+                         <div class="member-info">
+                        <h3>Oscar Epat</h3>
+                        <p>HR</p>
+                        <p>Specialized in hiring qualified candidates</p>
+                        
+                        </div>
+                        </div>
+                             
+                          <div class="team-member">   
+                          <div class="member-info">
+                        <h3>Lydia AKAMAIS</h3>
+                        <p>Accountant</p>
+                        <p>Focuses on cost analysis & budgeting for operational efficiency.</p>
+                        
+                    </div>
+                    </div>
+                   
+                   <div class="team-member">    
+                    <div class="member-info">
+                        <h3>CHUOL DAMAI GAI</h3>
+                        <p>Communication officer</p>
+                        <p>Manage account and resource mobilization.</p>
+                        
+                        </div>
+                        </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+               
+                <!-- Get In Touch Info Container -->
+                 <div class="contact-info-container" id="get-in-touch"
+    style="
+        background: linear-gradient(135deg, #4CAF50 0%, #2196F3 50%, #FF9800 100%);
+        border-radius: 12px;
+        padding: 25px;
+        color: white;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        max-width: 500px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+    ">
+    <h3 style="
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 24px;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    ">Get In Touch</h3>
+    
+    <div class="info-item" style="
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        background: rgba(255,255,255,0.15);
+        padding: 15px;
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+    ">
+        <div class="info-icon" style="
+            background: #4CAF50;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        ">
+            <i class="fas fa-map-marker-alt" style="color: white;"></i>
+        </div>
+        <div class="info-text">
+            <h4 style="margin: 0 0 5px 0; color: white;">Address</h4>
+            <p style="margin: 0; line-height: 1.5; color: rgba(255,255,255,0.9);">
+                Lorugum Road Highway, Nakwamekwi<br>
+                P.O Box 101, Lodwar-30500<br>
+                Turkana County, Kenya
+            </p>
+        </div>
+    </div>
+    
+    <div class="info-item" style="
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        background: rgba(255,255,255,0.15);
+        padding: 15px;
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+    ">
+        <div class="info-icon" style="
+            background: #2196F3;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        ">
+            <i class="fas fa-phone-alt" style="color: white;"></i>
+        </div>
+        <div class="info-text">
+            <h4 style="margin: 0 0 5px 0; color: white;">Phone</h4>
+            <p style="margin: 0;">
+                <a href="tel:+254706571905" style="color: white; text-decoration: none; transition: all 0.3s ease;" 
+                   onmouseover="this.style.color='#FFEB3B'" onmouseout="this.style.color='white'">
+                    +254 706 571 905
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="info-item" style="
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        background: rgba(255,255,255,0.15);
+        padding: 15px;
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+    ">
+        <div class="info-icon" style="
+            background: #FF9800;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        ">
+            <i class="fas fa-envelope" style="color: white;"></i>
+        </div>
+        <div class="info-text">
+            <h4 style="margin: 0 0 5px 0; color: white;">Email</h4>
+            <p style="margin: 0;">
+                <a href="mailto:turkanabrilliant@gmail.com" style="color: white; text-decoration: none; transition: all 0.3s ease;" 
+                   onmouseover="this.style.color='#FFEB3B'" onmouseout="this.style.color='white'">
+                    turkanabrilliant@gmail.com
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+                    
+                    <div style="background-color: #e6f2ff; border: 2px solid #0066cc; border-radius: 8px; padding: 20px; max-width: 500px; margin: 20px auto;">
+    <div class="info-item">
+        <div class="info-icon">
+            <i class="fas fa-clock"></i>
+        </div>
+        <div class="info-text">
+            <h4>Working Hours</h4>
+            <p>Monday - Friday: 8:00 AM - 5:00 PM<br></p>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-section">
+                <h3>Ways You Can Help</h3>
+                <ul>
+                    <li><i class="fas fa-hand-holding-heart"></i> Donate to TBPS Turkana County</li>
+                    <li><i class="fas fa-project-diagram"></i> Sponsor a project</li>
+                    <li><i class="fas fa-hands-helping"></i> Volunteer working on the organization</li>
+                    <li><i class="fas fa-bullhorn"></i> Spread the work of TBPS</li>
+                    <li><i class="fas fa-users"></i> Partner with TBPS in implementation of activities, projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+
+    <div class="donation-section" id="donate">
+    <div class="bank-card">
+        <div class="bank-image">
+            <img src="public/Images/f2faefa01539dfdb65bc069417a27e64(2).jpg" alt="Equity Bank" class="bank-logo">
+        </div>
+            
+            <div class="card-details">
+                <h2 class="donate-title">DONATE</h2>
+                
+                <div class="bank-info">
+                    <h4>Bank Details</h4>
+                    
+                    <p class="account-details">
+                        🏦
+                        Equity Bank Lodwar Branch<br>
+                        Account: 0990178964120<br>
+                        Paybill: 247247
+                    </p>
+                     <div style="
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(45deg, #ff9a9e, #fbc2eb);
+                clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+                opacity: 0.3;
+            "></div>
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(45deg, #6a11cb, #2575fc);
+                clip-path: polygon(0 0, 0% 100%, 100% 0);
+                opacity: 0.3;
+            "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+   <footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About TBPS</h3>
+                <p>Turkana Brilliant Psychotherapy Services is a nonprofit organization providing psychosocial services to the population of Turkana County since 2019.</p>
+                <p>Working for a Healthy Living</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#values">Our Values</a></li>
+                    <li><a href="#scope">Scope of Work</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#individual-counseling">Individual Counseling</a></li>
+                    <li><a href="#support-groups">Support Groups</a></li>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#awareness-campaigns">Awareness Campaigns</a></li>
+                    <li><a href="#training-program">Training Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support Our Work</h3>
+                <p>Help us continue providing essential mental health services to the Turkana community.</p>
+                <a href="#donate" class="btn">Donate Now</a>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="https://www.facebook.com/YourPageName" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/YourHandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/YourUsername" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/YourPage" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Turkana Brilliant Psychotherapy Services. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- JavaScript to update the year automatically -->
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<!-- CSS Styling -->
+<style>
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    
+    .footer-col {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-links a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+        color: #4267B2;
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 1rem;
+    }
+    
+    .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: #f1f1f1;
+        color: #333;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        background-color: #4267B2;
+        color: white;
+    }
+    
+    .social-links a:nth-child(2):hover {
+        background-color: #1DA1F2;
+    }
+    
+    .social-links a:nth-child(3):hover {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+    
+    .social-links a:nth-child(4):hover {
+        background-color: #0077B5;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+    
+    
+</style>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+        
+        // Service card contact slide toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.schedule-btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Find the contact slide right after the clicked button
+                    const contactSlide = this.nextElementSibling;
+                    
+                    // Close all other open contact slides first
+                    document.querySelectorAll('.contact-slide').forEach(slide => {
+                        if (slide !== contactSlide) {
+                            slide.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle the current contact slide
+                    contactSlide.classList.toggle('active');
+                    
+                    // Smooth scroll to the contact slide if it's opening
+                    if (contactSlide.classList.contains('active')) {
+                        setTimeout(() => {
+                            contactSlide.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'nearest'
+                            });
+                        }, 100);
+                    }
+                });
+            });
+            
+            // Close contact slides when clicking anywhere outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.schedule-btn') && !e.target.closest('.contact-slide')) {
+                    document.querySelectorAll('.contact-slide').forEach(slide => {
+                        slide.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
+<script>
+// Enhanced Protection Script for All Devices
+document.addEventListener('DOMContentLoaded', function() {
+    // Disable right-click context menu on all devices
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        
+        return false;
+    });
+
+    // Disable copy/paste keyboard shortcuts and touch gestures
+    document.addEventListener('keydown', function(e) {
+        // Disable Ctrl+C, Ctrl+X, Ctrl+V, Cmd+C, Cmd+X, Cmd+V (Mac)
+        if ((e.ctrlKey || e.metaKey) && 
+            (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 88)) {
+            e.preventDefault();
+            
+            return false;
+        }
+        
+        // Disable right-click key (some keyboards)
+        if (e.keyCode === 93) {
+            e.preventDefault();
+            return false;
+        }
+        
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Cmd+Opt+I (Mac)
+        if (e.keyCode === 123 || 
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && e.keyCode === 73) || 
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && e.keyCode === 74) ||
+            ((e.ctrlKey || e.metaKey) && e.keyCode === 85)) {
+            e.preventDefault();
+            alert('Developer tools are restricted on this website');
+            return false;
+        }
+    });
+
+    // Disable text selection (makes copying harder)
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    
+    // Prevent dragging images (common way to save them)
+    document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Extra protection against iframe embedding
+    if (window.location !== window.parent.location) {
+        window.top.location = window.location;
+    }
+
+    // Hide content until page fully loads (basic obfuscation)
+    document.body.style.visibility = 'hidden';
+    window.addEventListener('load', function() {
+        document.body.style.visibility = 'visible';
+    });
+});
+
+// Advanced obfuscation technique
+(function() {
+    // Disable console methods
+    if (typeof console !== "undefined") {
+        if (typeof console.log !== "undefined") {
+            console.log = function() {};
+        }
+        if (typeof console.warn !== "undefined") {
+            console.warn = function() {};
+        }
+        if (typeof console.error !== "undefined") {
+            console.error = function() {};
+        }
+    }
+    
+    // Prevent opening new windows/tabs
+    window.open = function() { return null; };
+})();
+</script>
+</body>
+</html>
